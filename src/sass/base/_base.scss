@@ -1,0 +1,37 @@
+@import "../abstracts/variables";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  @include respond(phone) {
+    font-size: 31%; // 1 rem = 5px, 5/16 = 31%
+  }
+  @include respond(tab-port) {
+    font-size: 50%; // 1 rem = 8px, 8/16 = 50%
+  }
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1 rem = 9px, 9/16 = 56%
+  }
+  @include respond(normal-desktop) {
+    font-size: 62%; // 1 rem = 10px, 10/16 = 62%
+  }
+  @include respond(big-desktop) {
+    font-size: 68%; // 1rem = 11, 11/16 = 68%
+  }
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  box-sizing: border-box;
+  color: $color-text;
+  background-color: #ededed;
+}

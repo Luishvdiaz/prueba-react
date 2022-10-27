@@ -1,0 +1,46 @@
+@import '../../sass/main.scss';
+
+.main-layout {
+  @include display-flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  flex-wrap: nowrap;
+
+  &__menu {
+    width: 100%;
+    height: 5rem;
+    background-color: #4fa3ed;
+
+    ul {
+      @include display-flex;
+      justify-content: flex-end;
+      width: 100%;
+      height: 5rem;
+      align-items: center;
+      list-style: none;
+
+      li {
+        text-decoration: none;
+        color: #082f51;
+        font-size: $font-size-medium;
+        font-weight: 600;
+        margin: 0 1.5rem;
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &__outlet {
+    flex: 1;
+    height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+}

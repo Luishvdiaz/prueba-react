@@ -1,0 +1,55 @@
+@import "../../sass/main.scss";
+
+.employee-form {
+  @include display-flex;
+  justify-content: center;
+  width: 100%;
+
+  &__form {
+    @include display-flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 70%;
+
+    &__error {
+      width: 100%;
+      font-size: $font-size-small;
+      color: red;
+    }
+
+    &__title {
+      width: 100%;
+      font-size: $font-size-big;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    &__input {
+      width: 100%;
+      margin: 1rem 0;
+      height: 3rem;
+      border-radius: 4px;
+      border: 1px solid #555555;
+      padding-left: 0.3rem;
+
+      &--alert {
+        border: 2px solid red;
+      }
+    }
+
+    &__button {
+      width: 100%;
+      margin: 1rem 0;
+      height: 3rem;
+      cursor: pointer;
+      background-color: #83c47c;
+      border-radius: 5px;
+      border: 1px solid #67a161;
+      transition: all 0.2s;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+  }
+}

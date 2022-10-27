@@ -1,0 +1,32 @@
+@import "../../sass/main.scss";
+
+.error-404 {
+  @include display-flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-weight: bold;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 5rem 0;
+
+  &__button {
+    width: 20%;
+    margin: 1rem 0;
+    height: 3rem;
+    cursor: pointer;
+    background-color: #5058c0;
+    color: $color-white;
+    border-radius: 5px;
+    border: 1px solid #362ea5;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+}
